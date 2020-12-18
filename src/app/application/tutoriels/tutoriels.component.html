@@ -1,0 +1,260 @@
+<!--<h2>L'id charger est : {{myParam}}</h2>-->
+
+<ng-container [ngSwitch]="myParam">
+    <ng-container *ngSwitchCase="'angular'">
+        <h1 class="text-warning mx-2">Mini tutoriel Angular</h1>
+        <p class="text-white mx-2">Angular est un framework open source développé par Google. Écrit en JavaScript, il
+            permet la création de Single Page Applications. Cela permet une meilleur fluidité puisque celle-ci s'ont
+            accesible via une page web unique et évite de devoir charger la page à chaque action.</p>
+        <p class="text-white mx-2">Pour utiliser Angular il faut d'abord
+            l'installer avec la commande "npm install -g @angular/cli@10.0.0".</p>
+        <p class="text-white mx-2">Pour ensuite installer et configurer le serveur Json on doit faire les commandes
+            suivantes: "npm i g json-server" et "npm i faker".</p>
+        <p class="text-white mx-2">Optionnellement vous pouvez installer le compilateur Typescript pour travailler à
+            partir d'un projet Angular. Les commandes pour l'installation sont: "npm install -g typescript@latest" et
+            "npm install -g ts-node".</p>
+    </ng-container>
+    <ng-container *ngSwitchCase="'crud'">
+        <h1 class="text-warning mx-2">Mini tutoriel CRUD</h1>
+        <p class="text-white mx-2">L'acronyme CRUD signifie Create, Read, Update et Delete. Le CRUD est utilisé pour
+            créer et
+            gérer les données
+            dans la base de données (INSERT, SELECT, UPDATE, DELETE). </p>
+    </ng-container>
+    <ng-container *ngSwitchCase="'typescript'">
+        <h1 class="text-warning mx-2">Mini tutoriel TypeScript</h1>
+        <p class="text-white mx-2">TypeScript est un language qui à été développé en 2012 par Microsoft. Ce language
+            open
+            source est un
+            sur-ensemble de Javascript, ce qui veux dire que tout code valide en Javascript est également valide en
+            TypeScript. Ce language permet la programation orientée objet et le typage. Pour le compiler il faut
+            utiliser l'outil de compilation TypeScript pour le transpiler en Javascript. Ce qui signifie que le code
+            exécuté sera un équivalent Javascript du code TypeScript compilé.</p>
+    </ng-container>
+    <ng-container *ngSwitchCase="'relations'">
+        <h1 class="text-center mb-5 text-warning">Mini tutoriel des relations</h1>
+        <div class="container text-white">
+            <div class="row mb-5 border border-info">
+                <div class="col-sm tex text-center my-2 align-self-center">
+                    <h5>OneToOne</h5>
+                </div>
+                <div class="col-sm">
+                    <div class="container">
+                        <div class="row">
+                            <p>Dans une relation OneToOne, un élément dans une table est associé avec un et seulement un
+                                élément d'une autre table.</p>
+                        </div>
+                        <div class="row">
+                            <p><strong>Exemple:</strong> Il a une relation OneToOne entre les tables permisDeConduire et
+                                personne. Cela
+                                veux dire qu'un permis de conduire doit absolument avoir une personne. Dans ce cas
+                                numAssSocial est la clé primaire de la table personne et est une clé étrangère dans la
+                                table permisDeConduire.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm mb-3">
+                                <table class="border border-warning">
+                                    <tr class="border border-warning text-center">
+                                        <th>permisDeConduire</th>
+                                    </tr>
+                                    <tr>
+                                        <td>numPermis (PK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>numAssSocial (FK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dateExpiration</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm mb-3">
+                                <table class="border border-warning">
+                                    <tr class="border border-warning text-center">
+                                        <th>personne</th>
+                                    </tr>
+                                    <tr>
+                                        <td>numAssSocial (PK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nom</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dateDeNaissance</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5 border border-info">
+                <div class="col-sm text-center my-2 align-self-center">
+                    <h5>OneToMany</h5>
+                </div>
+                <div class="col-sm">
+                    <div class="container">
+                        <div class="row">
+                            <p>Dans une relation OneToMany, un élément dans une table est associé avec un ou plusieurs
+                                éléments d'une autre table.</p>
+                        </div>
+                        <div class="row">
+                            <p><strong>Exemple:</strong> Il a une relation OneToMany entre les tables commande et
+                                client. Cela
+                                veux dire qu'un client peut avoir une ou plusieurs commandes. Une commande tant qu'a
+                                elle doit avoir absolument un client. Dans ce cas
+                                numClient est la clé primaire de la table client et est une clé étrangère dans la
+                                table commande.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm mb-3">
+                                <table class="border border-warning">
+                                    <tr class="border border-warning text-center">
+                                        <th>client</th>
+                                    </tr>
+                                    <tr>
+                                        <td>numClient (PK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nomCompagnie</td>
+                                    </tr>
+                                    <tr>
+                                        <td>solde</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm mb-3">
+                                <table class="border border-warning">
+                                    <tr class="border border-warning text-center">
+                                        <th>commande</th>
+                                    </tr>
+                                    <tr>
+                                        <td>numCommande (PK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>numClient (FK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>soldeFacture</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5 border border-info">
+                <div class="col-sm text-center my-2 align-self-center">
+                    <h5>ManyToMany</h5>
+                </div>
+                <div class="col-sm">
+                    <div class="container">
+                        <div class="row">
+                            <p>Dans une relation ManyToMany, plusieurs éléments d'une table sont associer avec plusieurs
+                                éléments d'une autre table.</p>
+                        </div>
+                        <div class="row">
+                            <p><strong>Exemple:</strong> Il a une relation ManyToMany entre les tables produit et
+                                client. Cela veux dire qu'un client peut acheter plusieurs produits et un produit peut
+                                être acheté par plusieurs clients. Lorsqu'il a une relation ManyToMany il faut la
+                                séparer
+                                en deux relation OneToMany et rajouter une autre table entre les 2.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm mb-3">
+                                <table class="border border-warning">
+                                    <tr class="border border-warning text-center">
+                                        <th>produit</th>
+                                    </tr>
+                                    <tr>
+                                        <td>idProduit (PK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>prix</td>
+                                    </tr>
+                                    <tr>
+                                        <td>catégorie</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm mb-3">
+                                <table class="border border-warning">
+                                    <tr class="border border-warning text-center">
+                                        <th>achat</th>
+                                    </tr>
+                                    <tr>
+                                        <td>idClient (PK, FK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>idProduit (PK, FK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>quantiter</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm mb-3">
+                                <table class="border border-warning">
+                                    <tr class="border border-warning text-center">
+                                        <th>client</th>
+                                    </tr>
+                                    <tr>
+                                        <td>idClient (PK)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>nom</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dateInscription</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5 border border-info">
+                <div class="col-sm text-center my-2 align-self-center">
+                    <h5>Héritage</h5>
+                </div>
+                <div class="col-sm">
+                    <div class="row">
+                        <p>
+                            L'héritage est un mécanisme qui permet a une classe d'hériter des caractéristiques de la
+                            classe parents.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p><strong>Exemple:</strong> Il a une relation entre lea table animal et
+                            chien. Cela veux dire qu'un chienva hériter des caractéristique de la table animal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5 border border-info">
+                <div class="col-sm text-center my-2 align-self-center">
+                    <h5>Composition / Agrégation</h5>
+                </div>
+                <div class="col-sm">
+                    <div class="row">
+                        <p>
+                            La composition permet a un objet d'être plus complexe en l'associant à d'autres objets
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p>
+                            L'agrégation permet de définir une classe comme étant liée à plusieurs entités de classes
+                            diffentes. Cela n'entraîne pas l'appartenance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngSwitchDefault>
+
+    </ng-container>
+</ng-container>

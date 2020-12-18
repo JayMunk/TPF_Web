@@ -1,0 +1,26 @@
+<div class="container" id="crudVote">
+    <h1 class="text-warning">Exemple Crud</h1>
+    <a [routerLink]="['/formulaire']" class="btn btn-success my-2">Ajouter un vote</a>
+    <table class="table bg-light">
+        <thead class="bg-info">
+            <tr>
+                <th *ngFor="let entete of headElements" scop="col">{{entete}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of listUsers; let i=index">
+                <td>{{user.id}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.country}}</td>
+                <td>{{user.vote}}</td>
+                <td>
+                    <a [routerLink]="[ '/showForm/', user.id ]" class="btn btn-info mx-2">Afficher</a>
+                    <a [routerLink]="[ '/updateForm/', user.id ]" class="btn btn-primary mx-2">Modifier</a>
+                    <button type="button" (click)="deleteById(user.id)" class="btn btn-danger mx-2">Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
