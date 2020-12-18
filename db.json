@@ -1,0 +1,92 @@
+{
+  "myApi": [
+    {
+      "id": 1,
+      "firstName": "Sebastian",
+      "lastName": "Eschweiler",
+      "email": "sebastian@codingthesmartway.com",
+      "vote": "Truth",
+      "country": "Canada"
+    },
+    {
+      "id": 2,
+      "firstName": "Steve",
+      "lastName": "Palmer",
+      "email": "steve@codingthesmartway.com",
+      "vote": "Truth",
+      "country": "Canada"
+    },
+    {
+      "id": 3,
+      "firstName": "Ann",
+      "lastName": "Smith",
+      "email": "ann@codingthesmartway.com",
+      "vote": "Truth",
+      "country": "Canada"
+    },
+    {
+      "firstName": "Jérémie",
+      "lastName": "Munger",
+      "email": "jaymunger10@live.ca",
+      "vote": "subtronics",
+      "country": "Canada",
+      "id": 4
+    },
+    {
+      "firstName": "John",
+      "lastName": "Mueds",
+      "email": "jaymdd@live.fr",
+      "vote": "Code:Pandorum",
+      "country": "Burkina Faso",
+      "id": 5
+    },
+    {
+      "firstName": "hosj",
+      "lastName": "ssaas",
+      "email": "jar10@live.caymunge",
+      "vote": "Code:Pandorum",
+      "country": "Botswana",
+      "id": 6
+    },
+    {
+      "firstName": "sssddd",
+      "lastName": "dddddd",
+      "email": "ddd@sdldds",
+      "vote": "subtronics",
+      "country": "Azerbaijan",
+      "id": 7
+    },
+    {
+      "firstName": "ddsaaa",
+      "lastName": "ssss",
+      "email": "ssdds",
+      "vote": "Truth",
+      "country": "Australia",
+      "id": 8
+    },
+    {
+      "firstName": "Jérémiezsdds",
+      "lastName": "Munger",
+      "email": "jayddssdd",
+      "vote": "subtronics",
+      "country": "Bosnia & Herzegovina",
+      "id": 9
+    },
+    {
+      "firstName": "maxi",
+      "lastName": "ddssa",
+      "email": "jassasas",
+      "vote": "Subtronics",
+      "country": "Canada",
+      "id": 10
+    },
+    {
+      "firstName": "dsssss",
+      "lastName": "ddddd",
+      "email": "dddddd",
+      "vote": "Subtronics",
+      "country": "Bangladesh",
+      "id": 11
+    }
+  ]
+}
